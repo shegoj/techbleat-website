@@ -16,7 +16,7 @@ sudo service nginx status
 
 ```
 sudo cp index.html  /usr/share/nginx/html
-sudo devops.jpg /usr/share/nginx/html 
+sudo cp devops.jpg /usr/share/nginx/html 
 ```
 
 == If you are using Jenkins to pipeline the work, you may need to give sudo permission to Jenkins user.
