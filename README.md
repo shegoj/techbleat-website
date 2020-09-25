@@ -1,6 +1,6 @@
 = Techbleat Landing Page 
 
-== Front-End Team
+Front-End Team
 
 ## Here is the new landing page the Front end team has been working on
 ![Landping Page](./page.png)
