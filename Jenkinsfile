@@ -1,22 +1,21 @@
-pipeline {
-    agent any 
-    stages {
-        stage ('Copy index file') {
-            steps {
-                echo "copying index file"
-                sh 'sudo cp index.html /usr/share/nginx/html'
-            }
-        }
-        stage ('Copy jpg file') {
-            steps {
-    echo "copying index file"
-                sh 'sudo cp devops.jpg /usr/share/nginx/html'
-            }
-        }
-        stage ('Job done') {
-            steps {
-                echo "task complete"
-            }
-        }
-    }
+pipeline {
+   agent any
+
+
+
+   stages {
+
+     stage('apply') {
+
+          environment { 
+                AWS_ACCESS_KEY_ID = credentials('ACCESS_KEY') 
+                AWS_SECRET_ACCESS_KEY = credentials('SECRET_KEY') 
+            }
+         steps {
+            sh 'terraform apply -auto-approve'
+         }
+      }
+   }
+
 }
+
